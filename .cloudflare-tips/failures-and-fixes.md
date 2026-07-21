@@ -68,6 +68,13 @@ Dengan adanya `wrangler.toml` yang valid, Cloudflare Pages akan membaca config i
      `"pages:build": "npm run build && npx @opennextjs/cloudflare build && mv .open-next/worker.js .open-next/_worker.js && cp -r .open-next/assets/* .open-next/"`
   2. Gunakan `npm run pages:build` sebagai **Build command** di Cloudflare Pages Dashboard.
 
+## 11. 500 Internal Server Error (TypeError: Cannot read properties of undefined (reading 'default'))
+- **Gejala Error**: Web masih 500 Internal Server Error meski asset sudah di-copy. Jika di-debug secara lokal menggunakan `npx wrangler pages dev .open-next`, muncul log error `TypeError: Cannot read properties of undefined (reading 'default') at interopDefault (.open-next/server-functions/default/handler.mjs)`.
+- **Penyebab**: **Next.js 16** menggunakan **Turbopack** secara default untuk perintah `next build`. Masalahnya, `@opennextjs/cloudflare` versi 1.20 belum kompatibel sepenuhnya dengan format output bundling dari Turbopack. Akibatnya, worker Cloudflare gagal menemukan modul/chunk halaman yang dirender (modul bernilai `undefined`), lalu crash saat mencoba mengekstrak `.default`.
+- **Solusi**: Nonaktifkan Turbopack saat build dengan memaksa Next.js untuk menggunakan **Webpack**.
+  Ubah command `build` di `package.json` menjadi:
+  `"build": "next build --webpack"`
+
 ## Konfigurasi Final Cloudflare Pages Dashboard yang Benar (Updated):
 - **Framework preset**: `None`
 - **Build command**: `npm run pages:build` *(pastikan script ini ada di package.json)*
@@ -75,3 +82,4 @@ Dengan adanya `wrangler.toml` yang valid, Cloudflare Pages akan membaca config i
 - **Root directory**: `/` (kosongkan)
 - **File wajib di repo**: `wrangler.toml` dengan `pages_build_output_dir = ".open-next"`, `compatibility_flags = ["nodejs_compat"]`, dan block `[vars]` berisi env variables.
 - **File DILARANG di repo**: `wrangler.jsonc` (akan memblokir pembacaan `wrangler.toml`)
+

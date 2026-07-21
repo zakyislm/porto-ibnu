@@ -14,7 +14,7 @@ const newsreader = Newsreader({
   style: ["normal", "italic"],
 });
 
-export const runtime = 'edge';
+
 export async function generateMetadata() {
   const { data } = supabase
     ? await supabase.from('profile').select('web_title, short_desc, image_url').eq('id', 1).single()
