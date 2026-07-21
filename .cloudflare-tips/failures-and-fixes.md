@@ -38,6 +38,10 @@ compatibility_date = "2026-07-21"
 compatibility_flags = ["nodejs_compat"]
 ```
 Dengan adanya `wrangler.toml` yang valid, Cloudflare Pages akan membaca config ini dan mengaktifkan `nodejs_compat`, sehingga semua Node.js built-in modules bisa di-resolve.
+## 7. wrangler.toml Tidak Terbaca Karena wrangler.jsonc Ada Duluan
+- **Gejala Error**: Sama persis dengan #6 (13 errors `Could not resolve`). Di log masih muncul `Found wrangler.json file... Skipping file and continuing.` meskipun `wrangler.toml` sudah ada di repo.
+- **Penyebab**: Cloudflare Pages mencari config file dengan prioritas: `wrangler.json` > `wrangler.jsonc` > `wrangler.toml`. Begitu menemukan `wrangler.jsonc` (yang tidak valid untuk Pages), Pages langsung skip dan **tidak mencari** `wrangler.toml` lagi.
+- **Solusi**: **Hapus** `wrangler.jsonc` dari repo (`git rm wrangler.jsonc`). File ini hanya diperlukan untuk deployment via Cloudflare Workers (`wrangler deploy`), bukan untuk Cloudflare Pages. Dengan menghapusnya, Pages akan menemukan `wrangler.toml` yang valid.
 
 ## Konfigurasi Final Cloudflare Pages Dashboard yang Benar:
 - **Framework preset**: `None`
@@ -45,3 +49,5 @@ Dengan adanya `wrangler.toml` yang valid, Cloudflare Pages akan membaca config i
 - **Build output directory**: `.open-next` (akan di-override oleh `wrangler.toml`)
 - **Root directory**: `/` (kosongkan)
 - **File wajib di repo**: `wrangler.toml` dengan `pages_build_output_dir` dan `compatibility_flags = ["nodejs_compat"]`
+- **File DILARANG di repo**: `wrangler.jsonc` (akan memblokir pembacaan `wrangler.toml`)
+
