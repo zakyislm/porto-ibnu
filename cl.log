@@ -1,0 +1,56 @@
+2026-07-21T12:59:05.823332Z	Cloning repository...
+2026-07-21T12:59:06.725409Z	From https://github.com/zakyislm/porto-ibnu
+2026-07-21T12:59:06.725731Z	 * branch            4a466f04794eb92daae3ac36c2d172f217ec01d1 -> FETCH_HEAD
+2026-07-21T12:59:06.725813Z	
+2026-07-21T12:59:06.746787Z	HEAD is now at 4a466f0 remove opennext to fix cloudflare build
+2026-07-21T12:59:06.747186Z	
+2026-07-21T12:59:06.787225Z	
+2026-07-21T12:59:06.78757Z	Using v2 root directory strategy
+2026-07-21T12:59:06.800078Z	Success: Finished cloning repository files
+2026-07-21T12:59:08.187842Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-07-21T12:59:08.188198Z	
+2026-07-21T12:59:08.347415Z	No Wrangler configuration file found. Continuing.
+2026-07-21T12:59:08.490751Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-07-21T12:59:08.491565Z	Installing project dependencies: npm clean-install --progress=false
+2026-07-21T12:59:20.149108Z	
+2026-07-21T12:59:20.149488Z	added 72 packages, and audited 73 packages in 11s
+2026-07-21T12:59:20.149573Z	
+2026-07-21T12:59:20.149641Z	17 packages are looking for funding
+2026-07-21T12:59:20.149703Z	  run `npm fund` for details
+2026-07-21T12:59:20.18475Z	
+2026-07-21T12:59:20.185024Z	2 moderate severity vulnerabilities
+2026-07-21T12:59:20.185106Z	
+2026-07-21T12:59:20.185161Z	To address all issues (including breaking changes), run:
+2026-07-21T12:59:20.185208Z	  npm audit fix --force
+2026-07-21T12:59:20.185243Z	
+2026-07-21T12:59:20.185286Z	Run `npm audit` for details.
+2026-07-21T12:59:20.264942Z	Executing user command: npx @cloudflare/next-on-pages@1 --legacy-peer-deps
+2026-07-21T12:59:22.574607Z	npm warn exec The following package was not found and will be installed: @cloudflare/next-on-pages@1.13.16
+2026-07-21T12:59:25.130228Z	npm error code ERESOLVE
+2026-07-21T12:59:25.130599Z	npm error ERESOLVE unable to resolve dependency tree
+2026-07-21T12:59:25.130706Z	npm error
+2026-07-21T12:59:25.130768Z	npm error While resolving: undefined@undefined
+2026-07-21T12:59:25.130821Z	npm error Found: @cloudflare/workers-types@4.20260702.1
+2026-07-21T12:59:25.130904Z	npm error node_modules/@cloudflare/workers-types
+2026-07-21T12:59:25.130956Z	npm error   peerOptional @cloudflare/workers-types@"^4.20240208.0" from @cloudflare/next-on-pages@1.13.16
+2026-07-21T12:59:25.130989Z	npm error   node_modules/@cloudflare/next-on-pages
+2026-07-21T12:59:25.131022Z	npm error     @cloudflare/next-on-pages@"1.13.16" from the root project
+2026-07-21T12:59:25.13106Z	npm error
+2026-07-21T12:59:25.131097Z	npm error Could not resolve dependency:
+2026-07-21T12:59:25.131141Z	npm error peerOptional @cloudflare/workers-types@"^5.20260714.1" from wrangler@4.112.0
+2026-07-21T12:59:25.131177Z	npm error node_modules/wrangler
+2026-07-21T12:59:25.131205Z	npm error   peer wrangler@"^3.28.2 || ^4.0.0" from @cloudflare/next-on-pages@1.13.16
+2026-07-21T12:59:25.131235Z	npm error   node_modules/@cloudflare/next-on-pages
+2026-07-21T12:59:25.131263Z	npm error     @cloudflare/next-on-pages@"1.13.16" from the root project
+2026-07-21T12:59:25.13129Z	npm error
+2026-07-21T12:59:25.131326Z	npm error Fix the upstream dependency conflict, or retry
+2026-07-21T12:59:25.131369Z	npm error this command with --force or --legacy-peer-deps
+2026-07-21T12:59:25.131411Z	npm error to accept an incorrect (and potentially broken) dependency resolution.
+2026-07-21T12:59:25.131439Z	npm error
+2026-07-21T12:59:25.131471Z	npm error
+2026-07-21T12:59:25.1315Z	npm error For a full report see:
+2026-07-21T12:59:25.13153Z	npm error /opt/buildhome/.npm/_logs/2026-07-21T12_59_20_481Z-eresolve-report.txt
+2026-07-21T12:59:25.132284Z	npm error A complete log of this run can be found in: /opt/buildhome/.npm/_logs/2026-07-21T12_59_20_481Z-debug-0.log
+2026-07-21T12:59:25.157055Z	Failed: Error while executing user command. Exited with error code: 1
+2026-07-21T12:59:25.162427Z	Failed: build command exited with code: 1
+2026-07-21T12:59:25.799532Z	Failed: error occurred while running build command
