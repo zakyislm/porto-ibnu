@@ -3,3 +3,8 @@ pages_build_output_dir = ".open-next"
 compatibility_date = "2026-07-21"
 compatibility_flags = ["nodejs_compat"]
 
+[vars]
+NEXT_PUBLIC_SITE_URL = "https://ibnugaots.pages.dev"
+NEXT_PUBLIC_SUPABASE_URL = "https://cyyndwixcdxntedsxlpe.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5eW5kd2l4Y2R4bnRlZHN4bHBlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwODY5NjcsImV4cCI6MjA5ODY2Mjk2N30.kGFiyvqUp3SAaIuUMbtmFi2ieHOJKV-jJUS06r0uoNc"
+MASTER_ADMIN_EMAIL = "ibnugaots231206@gmail.com"
