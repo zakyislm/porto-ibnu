@@ -1,56 +1,99 @@
-2026-07-21T12:59:05.823332Z	Cloning repository...
-2026-07-21T12:59:06.725409Z	From https://github.com/zakyislm/porto-ibnu
-2026-07-21T12:59:06.725731Z	 * branch            4a466f04794eb92daae3ac36c2d172f217ec01d1 -> FETCH_HEAD
-2026-07-21T12:59:06.725813Z	
-2026-07-21T12:59:06.746787Z	HEAD is now at 4a466f0 remove opennext to fix cloudflare build
-2026-07-21T12:59:06.747186Z	
-2026-07-21T12:59:06.787225Z	
-2026-07-21T12:59:06.78757Z	Using v2 root directory strategy
-2026-07-21T12:59:06.800078Z	Success: Finished cloning repository files
-2026-07-21T12:59:08.187842Z	Checking for configuration in a Wrangler configuration file (BETA)
-2026-07-21T12:59:08.188198Z	
-2026-07-21T12:59:08.347415Z	No Wrangler configuration file found. Continuing.
-2026-07-21T12:59:08.490751Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
-2026-07-21T12:59:08.491565Z	Installing project dependencies: npm clean-install --progress=false
-2026-07-21T12:59:20.149108Z	
-2026-07-21T12:59:20.149488Z	added 72 packages, and audited 73 packages in 11s
-2026-07-21T12:59:20.149573Z	
-2026-07-21T12:59:20.149641Z	17 packages are looking for funding
-2026-07-21T12:59:20.149703Z	  run `npm fund` for details
-2026-07-21T12:59:20.18475Z	
-2026-07-21T12:59:20.185024Z	2 moderate severity vulnerabilities
-2026-07-21T12:59:20.185106Z	
-2026-07-21T12:59:20.185161Z	To address all issues (including breaking changes), run:
-2026-07-21T12:59:20.185208Z	  npm audit fix --force
-2026-07-21T12:59:20.185243Z	
-2026-07-21T12:59:20.185286Z	Run `npm audit` for details.
-2026-07-21T12:59:20.264942Z	Executing user command: npx @cloudflare/next-on-pages@1 --legacy-peer-deps
-2026-07-21T12:59:22.574607Z	npm warn exec The following package was not found and will be installed: @cloudflare/next-on-pages@1.13.16
-2026-07-21T12:59:25.130228Z	npm error code ERESOLVE
-2026-07-21T12:59:25.130599Z	npm error ERESOLVE unable to resolve dependency tree
-2026-07-21T12:59:25.130706Z	npm error
-2026-07-21T12:59:25.130768Z	npm error While resolving: undefined@undefined
-2026-07-21T12:59:25.130821Z	npm error Found: @cloudflare/workers-types@4.20260702.1
-2026-07-21T12:59:25.130904Z	npm error node_modules/@cloudflare/workers-types
-2026-07-21T12:59:25.130956Z	npm error   peerOptional @cloudflare/workers-types@"^4.20240208.0" from @cloudflare/next-on-pages@1.13.16
-2026-07-21T12:59:25.130989Z	npm error   node_modules/@cloudflare/next-on-pages
-2026-07-21T12:59:25.131022Z	npm error     @cloudflare/next-on-pages@"1.13.16" from the root project
-2026-07-21T12:59:25.13106Z	npm error
-2026-07-21T12:59:25.131097Z	npm error Could not resolve dependency:
-2026-07-21T12:59:25.131141Z	npm error peerOptional @cloudflare/workers-types@"^5.20260714.1" from wrangler@4.112.0
-2026-07-21T12:59:25.131177Z	npm error node_modules/wrangler
-2026-07-21T12:59:25.131205Z	npm error   peer wrangler@"^3.28.2 || ^4.0.0" from @cloudflare/next-on-pages@1.13.16
-2026-07-21T12:59:25.131235Z	npm error   node_modules/@cloudflare/next-on-pages
-2026-07-21T12:59:25.131263Z	npm error     @cloudflare/next-on-pages@"1.13.16" from the root project
-2026-07-21T12:59:25.13129Z	npm error
-2026-07-21T12:59:25.131326Z	npm error Fix the upstream dependency conflict, or retry
-2026-07-21T12:59:25.131369Z	npm error this command with --force or --legacy-peer-deps
-2026-07-21T12:59:25.131411Z	npm error to accept an incorrect (and potentially broken) dependency resolution.
-2026-07-21T12:59:25.131439Z	npm error
-2026-07-21T12:59:25.131471Z	npm error
-2026-07-21T12:59:25.1315Z	npm error For a full report see:
-2026-07-21T12:59:25.13153Z	npm error /opt/buildhome/.npm/_logs/2026-07-21T12_59_20_481Z-eresolve-report.txt
-2026-07-21T12:59:25.132284Z	npm error A complete log of this run can be found in: /opt/buildhome/.npm/_logs/2026-07-21T12_59_20_481Z-debug-0.log
-2026-07-21T12:59:25.157055Z	Failed: Error while executing user command. Exited with error code: 1
-2026-07-21T12:59:25.162427Z	Failed: build command exited with code: 1
-2026-07-21T12:59:25.799532Z	Failed: error occurred while running build command
+2026-07-21T13:13:36.435991Z	Cloning repository...
+2026-07-21T13:13:37.493843Z	From https://github.com/zakyislm/porto-ibnu
+2026-07-21T13:13:37.494247Z	 * branch            3e4fabd4855a5dfebb51f9088065bdf3258a31b6 -> FETCH_HEAD
+2026-07-21T13:13:37.49476Z	
+2026-07-21T13:13:37.519959Z	HEAD is now at 3e4fabd switch back to opennext for next 16 support
+2026-07-21T13:13:37.520347Z	
+2026-07-21T13:13:37.569168Z	
+2026-07-21T13:13:37.569704Z	Using v2 root directory strategy
+2026-07-21T13:13:37.589407Z	Success: Finished cloning repository files
+2026-07-21T13:13:39.232184Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-07-21T13:13:39.232761Z	
+2026-07-21T13:13:39.420971Z	No Wrangler configuration file found. Continuing.
+2026-07-21T13:13:39.989505Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-07-21T13:13:39.989972Z	Installing project dependencies: npm clean-install --progress=false
+2026-07-21T13:13:44.559652Z	npm error code EUSAGE
+2026-07-21T13:13:44.561016Z	npm error
+2026-07-21T13:13:44.561426Z	npm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+2026-07-21T13:13:44.561623Z	npm error
+2026-07-21T13:13:44.561828Z	npm error Missing: wrangler@4.112.0 from lock file
+2026-07-21T13:13:44.56191Z	npm error Missing: @cloudflare/kv-asset-handler@0.5.0 from lock file
+2026-07-21T13:13:44.561961Z	npm error Missing: @cloudflare/unenv-preset@2.16.1 from lock file
+2026-07-21T13:13:44.562001Z	npm error Missing: unenv@2.0.0-rc.24 from lock file
+2026-07-21T13:13:44.562034Z	npm error Missing: blake3-wasm@2.1.5 from lock file
+2026-07-21T13:13:44.562093Z	npm error Missing: esbuild@0.28.1 from lock file
+2026-07-21T13:13:44.562143Z	npm error Missing: fsevents@2.3.3 from lock file
+2026-07-21T13:13:44.562189Z	npm error Missing: miniflare@4.20260714.0 from lock file
+2026-07-21T13:13:44.562248Z	npm error Missing: workerd@1.20260714.1 from lock file
+2026-07-21T13:13:44.5623Z	npm error Missing: @cspotcode/source-map-support@0.8.1 from lock file
+2026-07-21T13:13:44.562334Z	npm error Missing: undici@7.28.0 from lock file
+2026-07-21T13:13:44.562371Z	npm error Missing: ws@8.21.0 from lock file
+2026-07-21T13:13:44.562427Z	npm error Missing: youch@4.1.0-beta.10 from lock file
+2026-07-21T13:13:44.562504Z	npm error Missing: @jridgewell/trace-mapping@0.3.9 from lock file
+2026-07-21T13:13:44.562565Z	npm error Missing: pathe@2.0.3 from lock file
+2026-07-21T13:13:44.562728Z	npm error Missing: @cloudflare/workerd-darwin-64@1.20260714.1 from lock file
+2026-07-21T13:13:44.562838Z	npm error Missing: @cloudflare/workerd-darwin-arm64@1.20260714.1 from lock file
+2026-07-21T13:13:44.562901Z	npm error Missing: @cloudflare/workerd-linux-64@1.20260714.1 from lock file
+2026-07-21T13:13:44.562957Z	npm error Missing: @cloudflare/workerd-linux-arm64@1.20260714.1 from lock file
+2026-07-21T13:13:44.563006Z	npm error Missing: @cloudflare/workerd-windows-64@1.20260714.1 from lock file
+2026-07-21T13:13:44.563079Z	npm error Missing: @poppinss/colors@4.1.6 from lock file
+2026-07-21T13:13:44.563143Z	npm error Missing: @poppinss/dumper@0.6.5 from lock file
+2026-07-21T13:13:44.563201Z	npm error Missing: @speed-highlight/core@1.2.17 from lock file
+2026-07-21T13:13:44.563268Z	npm error Missing: youch-core@0.3.3 from lock file
+2026-07-21T13:13:44.563338Z	npm error Missing: kleur@4.1.5 from lock file
+2026-07-21T13:13:44.563399Z	npm error Missing: @sindresorhus/is@7.2.0 from lock file
+2026-07-21T13:13:44.563449Z	npm error Missing: supports-color@10.2.2 from lock file
+2026-07-21T13:13:44.563667Z	npm error Missing: @poppinss/exception@1.2.3 from lock file
+2026-07-21T13:13:44.563965Z	npm error Missing: error-stack-parser-es@1.0.5 from lock file
+2026-07-21T13:13:44.56421Z	npm error Missing: @esbuild/aix-ppc64@0.28.1 from lock file
+2026-07-21T13:13:44.564292Z	npm error Missing: @esbuild/android-arm@0.28.1 from lock file
+2026-07-21T13:13:44.564449Z	npm error Missing: @esbuild/android-arm64@0.28.1 from lock file
+2026-07-21T13:13:44.564539Z	npm error Missing: @esbuild/android-x64@0.28.1 from lock file
+2026-07-21T13:13:44.564634Z	npm error Missing: @esbuild/darwin-arm64@0.28.1 from lock file
+2026-07-21T13:13:44.564721Z	npm error Missing: @esbuild/darwin-x64@0.28.1 from lock file
+2026-07-21T13:13:44.564789Z	npm error Missing: @esbuild/freebsd-arm64@0.28.1 from lock file
+2026-07-21T13:13:44.564845Z	npm error Missing: @esbuild/freebsd-x64@0.28.1 from lock file
+2026-07-21T13:13:44.56489Z	npm error Missing: @esbuild/linux-arm@0.28.1 from lock file
+2026-07-21T13:13:44.564942Z	npm error Missing: @esbuild/linux-arm64@0.28.1 from lock file
+2026-07-21T13:13:44.565002Z	npm error Missing: @esbuild/linux-ia32@0.28.1 from lock file
+2026-07-21T13:13:44.565044Z	npm error Missing: @esbuild/linux-loong64@0.28.1 from lock file
+2026-07-21T13:13:44.565109Z	npm error Missing: @esbuild/linux-mips64el@0.28.1 from lock file
+2026-07-21T13:13:44.565165Z	npm error Missing: @esbuild/linux-ppc64@0.28.1 from lock file
+2026-07-21T13:13:44.565203Z	npm error Missing: @esbuild/linux-riscv64@0.28.1 from lock file
+2026-07-21T13:13:44.565238Z	npm error Missing: @esbuild/linux-s390x@0.28.1 from lock file
+2026-07-21T13:13:44.565276Z	npm error Missing: @esbuild/linux-x64@0.28.1 from lock file
+2026-07-21T13:13:44.565314Z	npm error Missing: @esbuild/netbsd-arm64@0.28.1 from lock file
+2026-07-21T13:13:44.565355Z	npm error Missing: @esbuild/netbsd-x64@0.28.1 from lock file
+2026-07-21T13:13:44.565401Z	npm error Missing: @esbuild/openbsd-arm64@0.28.1 from lock file
+2026-07-21T13:13:44.565437Z	npm error Missing: @esbuild/openbsd-x64@0.28.1 from lock file
+2026-07-21T13:13:44.565472Z	npm error Missing: @esbuild/openharmony-arm64@0.28.1 from lock file
+2026-07-21T13:13:44.565508Z	npm error Missing: @esbuild/sunos-x64@0.28.1 from lock file
+2026-07-21T13:13:44.565546Z	npm error Missing: @esbuild/win32-arm64@0.28.1 from lock file
+2026-07-21T13:13:44.56559Z	npm error Missing: @esbuild/win32-ia32@0.28.1 from lock file
+2026-07-21T13:13:44.565653Z	npm error Missing: @esbuild/win32-x64@0.28.1 from lock file
+2026-07-21T13:13:44.565716Z	npm error
+2026-07-21T13:13:44.565765Z	npm error Clean install a project
+2026-07-21T13:13:44.565802Z	npm error
+2026-07-21T13:13:44.56584Z	npm error Usage:
+2026-07-21T13:13:44.565883Z	npm error npm ci
+2026-07-21T13:13:44.565934Z	npm error
+2026-07-21T13:13:44.565977Z	npm error Options:
+2026-07-21T13:13:44.566008Z	npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+2026-07-21T13:13:44.566075Z	npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+2026-07-21T13:13:44.566137Z	npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+2026-07-21T13:13:44.566186Z	npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+2026-07-21T13:13:44.566225Z	npm error [--no-bin-links] [--no-fund] [--dry-run]
+2026-07-21T13:13:44.566267Z	npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+2026-07-21T13:13:44.566317Z	npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+2026-07-21T13:13:44.566372Z	npm error
+2026-07-21T13:13:44.566408Z	npm error aliases: clean-install, ic, install-clean, isntall-clean
+2026-07-21T13:13:44.566465Z	npm error
+2026-07-21T13:13:44.56652Z	npm error Run "npm help ci" for more info
+2026-07-21T13:13:44.566579Z	npm error A complete log of this run can be found in: /opt/buildhome/.npm/_logs/2026-07-21T13_13_40_965Z-debug-0.log
+2026-07-21T13:13:44.637899Z	Error: Exit with error code: 1
+2026-07-21T13:13:44.638442Z	    at ChildProcess.<anonymous> (/snapshot/dist/run-build.js)
+2026-07-21T13:13:44.63855Z	    at Object.onceWrapper (node:events:652:26)
+2026-07-21T13:13:44.638598Z	    at ChildProcess.emit (node:events:537:28)
+2026-07-21T13:13:44.638646Z	    at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2026-07-21T13:13:44.64426Z	Failed: build command exited with code: 1
+2026-07-21T13:13:45.398948Z	Failed: error occurred while running build command
