@@ -22,8 +22,13 @@ Catatan ini dirangkum dari beberapa kegagalan deployment saat migrasi dari Verce
 - **Penyebab**: Menambahkan baris `export const config = { runtime: 'edge' }` secara manual ke dalam file `middleware.js`.
 - **Solusi**: Hapus deklarasi runtime manual tersebut. Di Next.js 16, file `middleware.js` sudah otomatis dikonfigurasi sebagai Edge runtime secara internal. Menambahkannya secara manual malah memicu error flag experimental.
 
+## 5. Website SUCCESS Tapi Pas Dibuka 404 Not Found (Cloudflare Pages)
+- **Gejala Error**: Build sukses, tapi saat URL diakses, muncul halaman "This page can't be found (HTTP 404)".
+- **Penyebab**: `@opennextjs/cloudflare` sejatinya didesain untuk **Cloudflare Workers**, bukan Cloudflare Pages. OpenNext menyimpan kode backend (SSR/API) di `.open-next/worker.js` (di luar folder assets). Padahal, Cloudflare Pages mengharapkan kode backend berada di **dalam** folder assets dengan nama persis `_worker.js`. Karena tidak ditemukan, Cloudflare Pages hanya men-deploy folder statis kosongan tanpa backend.
+- **Solusi**: Tambahkan perintah `mv` (pindah file) di bagian akhir Build Command untuk memasukkan `worker.js` ke dalam folder assets sebagai `_worker.js`.
+
 ## Konfigurasi Final Cloudflare Pages Dashboard yang Benar:
 - **Framework preset**: `None`
-- **Build command**: `npm run build && npx @opennextjs/cloudflare build`
+- **Build command**: `npm run build && npx @opennextjs/cloudflare build && mv .open-next/worker.js .open-next/assets/_worker.js`
 - **Build output directory**: `.open-next/assets`
 - **Root directory**: `/` (kosongkan)
