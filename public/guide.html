@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio User Guide</title>
+    <style>
+        :root {
+            --bg: #F9F7F3;
+            --text: #1a1a1a;
+            --text-muted: #6b6b6b;
+            --accent: #0D6E75;
+            --border: #EAE4DA;
+            --surface: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            color: var(--text);
+            letter-spacing: -0.03em;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--text);
+            margin-top: 0;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2 span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        p, ul {
+            color: var(--text-muted);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+            color: #334155;
+        }
+
+        .note {
+            background-color: rgba(13, 110, 117, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 24px;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Portfolio User Guide</h1>
+            <p>A quick manual on how to manage and update your portfolio content.</p>
+        </div>
+
+        <div class="card">
+            <h2><span>1</span> Accessing the Dashboard</h2>
+            <p>To start editing your portfolio, you need to log in to the Admin Dashboard.</p>
+            <ul>
+                <li>Add <span class="highlight">/login</span> to the end of your website URL (e.g., <em>yourwebsite.com/login</em>).</li>
+                <li>Click the <strong>Continue with Google</strong> button.</li>
+                <li>Sign in using your authorized Google account.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><span>2</span> Profile</h2>
+            <p>The Profile tab allows you to update your main identity and website meta details.</p>
+            <ul>
+                <li><strong>Personal Info:</strong> Update your name, job title, short bio, and location.</li>
+                <li><strong>Images & Files:</strong> Upload a new profile picture and your latest CV document.</li>
+                <li><strong>About Section:</strong> Edit the detailed text that appears in your "Who I Am" section.</li>
+                <li><strong>Web Title:</strong> Update the text that appears on the browser tab.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><span>3</span> Projects & Experience</h2>
+            <p>Keep your portfolio updated with your latest work and history.</p>
+            <ul>
+                <li><strong>Projects:</strong> Add new projects with titles, descriptions, and cover images. You can use the up/down arrows to reorder how they appear on the live site.</li>
+                <li><strong>Experience:</strong> Add your educational background, organization history, or work experience. You can arrange them chronologically using the reorder buttons.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><span>4</span> Skills & Values</h2>
+            <p>Highlight what you are good at and what you stand for.</p>
+            <ul>
+                <li><strong>Values:</strong> Add core principles that define your work ethic (e.g., "Empathy First").</li>
+                <li><strong>Skills:</strong> Add specific skills as tags. Use the category dropdown to group them (e.g., Soft Skills vs. Hard Skills).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><span>5</span> Social Links & Access Settings</h2>
+            <p>The Settings tab helps you manage connectivity and security.</p>
+            <ul>
+                <li><strong>Social Links:</strong> Add links to your LinkedIn, Instagram, etc. The system will automatically detect the platform based on the URL and display the correct icon in your footer.</li>
+                <li><strong>Email Contact:</strong> If you add an "Email" link, the Contact Form on the homepage will automatically route messages to that address.</li>
+                <li><strong>Whitelisted Admins:</strong> Want to give someone else access to edit your portfolio? Add their Google Email here. (Note: Only authorized emails can log in).</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <strong>Important Note:</strong> Always remember to click the <strong>Save</strong> button at the bottom of the screen after making changes. If you try to navigate away without saving, your changes will be lost!
+        </div>
+
+    </div>
+
+</body>
+</html>
