@@ -223,7 +223,7 @@ export default function PortfolioClient({ data }) {
         <div className="bg-[var(--bg)]/70 backdrop-blur-xl border-b border-[var(--border)]/50 relative z-50 shadow-sm shadow-black/5">
           <div className="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between">
             <a href="#" className="text-2xl font-bold tracking-tight group">
-              {p.full_name || 'Ibnu Ghaots'}<span className="text-[var(--accent)] group-hover:opacity-70 transition-opacity">.</span>
+              {p.full_name || 'Ibnu Gaots'}<span className="text-[var(--accent)] group-hover:opacity-70 transition-opacity">.</span>
             </a>
             <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium text-[var(--fg-muted)]">
               <a href="#about" className="link-underline hover:text-[var(--fg)] transition-colors">About</a>
@@ -525,9 +525,9 @@ export default function PortfolioClient({ data }) {
       <footer className="bg-[var(--bg)] border-t border-[var(--border)] text-[var(--fg-muted)]">
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-8 text-sm">
           <div className="flex flex-col items-start gap-2 text-left">
-            <a href="#" className="text-2xl font-bold tracking-tight text-[var(--fg)]">{p.full_name || 'Ibnu Ghaots'}<span className="text-[var(--accent)]">.</span></a>
+            <a href="#" className="text-2xl font-bold tracking-tight text-[var(--fg)]">{p.full_name || 'Ibnu Gaots'}<span className="text-[var(--accent)]">.</span></a>
             <p className="flex items-center gap-2 text-xs font-medium tracking-[0.1em]">
-              &copy; {YEAR} {p.full_name || "Ibnu Ghaots"}
+              &copy; {YEAR} {p.full_name || "Ibnu Gaots"}
             </p>
             <p className="text-[var(--fg-muted)] mt-2 italic text-[15px]">{p.role || "Helping people through meaningful conversations."}</p>
           </div>

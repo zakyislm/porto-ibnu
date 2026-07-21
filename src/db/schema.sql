@@ -1,4 +1,4 @@
--- Schema for Ibnu Ghaots Portfolio
+-- Schema for Ibnu Gaots Portfolio
 
 CREATE TABLE profile (
     id SERIAL PRIMARY KEY,
@@ -104,7 +104,7 @@ CREATE POLICY "Whitelisted admins can delete whitelisted_admins" ON whitelisted_
 
 -- Insert Default Data
 INSERT INTO profile (id, full_name, title, short_desc, quote, about_bg, about_title, about_desc_1, about_desc_2, location, role, is_open_to_work, open_to_work_msg, rhythm_quote, rhythm_author) VALUES
-(1, 'Ibnu Ghaots', 'Counseling & Psychology', 'A counseling student passionate about understanding people, building connections, and unlocking human potential.', '"Everyone deserves to be heard."', 'Background', 'Who I Am', 'I am a first-year Guidance and Counseling student at the State University of Jakarta (UNJ). Since high school, I have been deeply drawn to psychology, human interaction, and personal growth.', 'I bring strong problem-solving skills, keen observation, and public speaking abilities refined through years of organizational leadership. My goal is to help others navigate their challenges and discover their strengths.', 'Based in Jakarta', 'Guidance & Counseling Student', true, 'Open for freelance projects & collaborations', '"The greatest gift you can give someone is your genuine attention and empathy."', 'Ibnu Ghaots');
+(1, 'Ibnu Gaots', 'Counseling & Psychology', 'A counseling student passionate about understanding people, building connections, and unlocking human potential.', '"Everyone deserves to be heard."', 'Background', 'Who I Am', 'I am a first-year Guidance and Counseling student at the State University of Jakarta (UNJ). Since high school, I have been deeply drawn to psychology, human interaction, and personal growth.', 'I bring strong problem-solving skills, keen observation, and public speaking abilities refined through years of organizational leadership. My goal is to help others navigate their challenges and discover their strengths.', 'Based in Jakarta', 'Guidance & Counseling Student', true, 'Open for freelance projects & collaborations', '"The greatest gift you can give someone is your genuine attention and empathy."', 'Ibnu Gaots');
 
 INSERT INTO "values" (title, description, icon_name, sort_order) VALUES
 ('Empathy First', 'Understanding people without judgment. I believe true connection starts when we listen to understand, not just to reply.', 'Heart', 1),

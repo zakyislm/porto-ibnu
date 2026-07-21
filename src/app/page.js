@@ -43,7 +43,7 @@ export default async function Home() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: data.profile.full_name || 'Ibnu Ghaots',
+    name: data.profile.full_name || 'Ibnu Gaots',
     jobTitle: data.profile.title || 'Professional',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
     image: data.profile.image_url || '',

@@ -238,7 +238,7 @@ export default function ProfileEditor() {
                     <input 
                       type="text" 
                       className="w-full bg-[var(--bg-alt)] border border-[var(--border)] rounded-xl px-4 py-3 focus:border-[var(--accent)] outline-none" 
-                      placeholder="e.g. Ibnu Ghaots | Portfolio"
+                      placeholder="e.g. Ibnu Gaots | Portfolio"
                       value={profile.web_title || ''} 
                       onChange={e => setProfile({...profile, web_title: e.target.value})} 
                     />

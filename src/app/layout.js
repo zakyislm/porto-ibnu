@@ -18,7 +18,7 @@ export const runtime = 'edge';
 export async function generateMetadata() {
   const { data } = await supabase.from('profile').select('web_title, short_desc, image_url').eq('id', 1).single();
   
-  const title = data?.web_title || "Ibnu Ghaots - Portfolio";
+  const title = data?.web_title || "Ibnu Gaots - Portfolio";
   const description = data?.short_desc || "Counseling & Psychology Student at Universitas Negeri Jakarta";
   // Next.js will auto-resolve relative URLs using metadataBase if defined, 
   // but since we pull a full Supabase URL for images, it works perfectly.
