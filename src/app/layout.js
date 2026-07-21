@@ -16,7 +16,9 @@ const newsreader = Newsreader({
 
 export const runtime = 'edge';
 export async function generateMetadata() {
-  const { data } = await supabase.from('profile').select('web_title, short_desc, image_url').eq('id', 1).single();
+  const { data } = supabase
+    ? await supabase.from('profile').select('web_title, short_desc, image_url').eq('id', 1).single()
+    : { data: null };
   
   const title = data?.web_title || "Ibnu Gaots - Portfolio";
   const description = data?.short_desc || "Counseling & Psychology Student at Universitas Negeri Jakarta";

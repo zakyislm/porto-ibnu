@@ -8,6 +8,7 @@ export const revalidate = 0;
 
 export default async function Home() {
   // Fetch data from Supabase
+  const empty = { data: null, error: null };
   const [
     { data: profileData, error: profileErr },
     { data: valuesData, error: valuesErr },
@@ -15,14 +16,14 @@ export default async function Home() {
     { data: projectsData, error: projErr },
     { data: skillsData, error: skillsErr },
     { data: socialLinksData, error: socialErr }
-  ] = await Promise.all([
+  ] = supabase ? await Promise.all([
     supabase.from('profile').select('*').single(),
     supabase.from('values').select('*').order('sort_order', { ascending: true }),
     supabase.from('experience').select('*').order('sort_order', { ascending: true }),
     supabase.from('projects').select('*').order('sort_order', { ascending: true }),
     supabase.from('skills').select('*').order('sort_order', { ascending: true }),
     supabase.from('social_links').select('*').order('index', { ascending: true })
-  ]);
+  ]) : [empty, empty, empty, empty, empty, empty];
 
   if (profileErr) console.error("Profile Error:", profileErr);
   if (valuesErr) console.error("Values Error:", valuesErr);
