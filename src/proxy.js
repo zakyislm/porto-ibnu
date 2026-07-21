@@ -1,11 +1,10 @@
 import { updateSession } from './utils/supabase/middleware'
 
-export async function middleware(request) {
+export async function proxy(request) {
   return await updateSession(request)
 }
 
 export const config = {
-  runtime: 'edge',
   matcher: [
     /*
      * Match all request paths except for the ones starting with:
