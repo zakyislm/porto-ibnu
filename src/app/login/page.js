@@ -1,7 +1,7 @@
 "use client"
 
 import { createClient } from '../../utils/supabase/client'
-import { useState, Suspense } from 'react'
+import { useState, Suspense, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { ArrowRight, Lock, Loader2 } from 'lucide-react'
 
@@ -9,6 +9,15 @@ function LoginContent() {
   const [loading, setLoading] = useState(false)
   const searchParams = useSearchParams()
   const errorMsg = searchParams.get('error')
+
+  useEffect(() => {
+    const supabase = createClient()
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        window.location.href = '/admin'
+      }
+    })
+  }, [])
 
   const handleLogin = async () => {
     try {

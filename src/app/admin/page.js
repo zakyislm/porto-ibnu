@@ -44,9 +44,25 @@ export default function AdminDashboard() {
     resetTimer();
     events.forEach(e => window.addEventListener(e, resetTimer));
 
+    // Client-side auth check
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) {
+        window.location.href = '/login';
+      }
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (!session) {
+        window.location.href = '/login';
+      }
+    });
+
     return () => {
       if (inactivityTimer) clearTimeout(inactivityTimer);
       events.forEach(e => window.removeEventListener(e, resetTimer));
+      subscription.unsubscribe();
     };
   }, []);
 

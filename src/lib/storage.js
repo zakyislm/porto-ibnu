@@ -79,7 +79,7 @@ export const uploadFile = async (file, bucket = 'porto-ibnughaotz-tzy', folder =
       .from(bucket)
       .getPublicUrl(filePath);
 
-    return publicUrlData.publicUrl.replace('https://cyyndwixcdxntedsxlpe.supabase.co/storage/v1/object/public/porto-ibnughaotz-tzy', '/storage');
+    return publicUrlData.publicUrl;
   } catch (error) {
     console.error('Error uploading file:', error);
     throw error;
