@@ -24,11 +24,11 @@ Catatan ini dirangkum dari beberapa kegagalan deployment saat migrasi dari Verce
 
 ## 5. Website SUCCESS Tapi Pas Dibuka 404 Not Found (Cloudflare Pages)
 - **Gejala Error**: Build sukses, tapi saat URL diakses, muncul halaman "This page can't be found (HTTP 404)".
-- **Penyebab**: `@opennextjs/cloudflare` sejatinya didesain untuk **Cloudflare Workers**, bukan Cloudflare Pages. OpenNext menyimpan kode backend (SSR/API) di `.open-next/worker.js` (di luar folder assets). Padahal, Cloudflare Pages mengharapkan kode backend berada di **dalam** folder assets dengan nama persis `_worker.js`. Karena tidak ditemukan, Cloudflare Pages hanya men-deploy folder statis kosongan tanpa backend.
-- **Solusi**: Tambahkan perintah `mv` (pindah file) di bagian akhir Build Command untuk memasukkan `worker.js` ke dalam folder assets sebagai `_worker.js`.
+- **Penyebab**: `@opennextjs/cloudflare` sejatinya didesain untuk **Cloudflare Workers**, bukan Cloudflare Pages. OpenNext menyimpan kode backend (SSR/API) di `.open-next/worker.js`. Padahal, Cloudflare Pages mengharapkan kode backend bernama `_worker.js` berada di **root output directory**.
+- **Solusi**: Ubah nama `worker.js` menjadi `_worker.js` dan jadikan `.open-next` (bukan `.open-next/assets`) sebagai output directory.
 
 ## Konfigurasi Final Cloudflare Pages Dashboard yang Benar:
 - **Framework preset**: `None`
-- **Build command**: `npm run build && npx @opennextjs/cloudflare build && mv .open-next/worker.js .open-next/assets/_worker.js`
-- **Build output directory**: `.open-next/assets`
+- **Build command**: `npm run build && npx @opennextjs/cloudflare build && mv .open-next/worker.js .open-next/_worker.js`
+- **Build output directory**: `.open-next`
 - **Root directory**: `/` (kosongkan)
