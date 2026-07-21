@@ -68,4 +68,18 @@ Dengan adanya `wrangler.toml` yang valid, Cloudflare Pages akan membaca config i
     NEXT_PUBLIC_SUPABASE_URL = "https://xxx.supabase.co"
     NEXT_PUBLIC_SUPABASE_ANON_KEY = "xxx"
     MASTER_ADMIN_EMAIL = "ibnu@gmail.com"
-    ```
+## 10. 500 Internal Server Error (Lanjutan: Asset Routing Issue)
+- **Gejala Error**: Web masih 500 Internal Server Error, padahal env vars sudah dimasukkan ke `wrangler.toml` dan build sukses.
+- **Penyebab**: Output direktori dari `@opennextjs/cloudflare` adalah `.open-next` yang berisi `worker.js` dan folder `assets/`. Jika kita menggunakan `.open-next` sebagai `pages_build_output_dir`, Cloudflare Pages akan menempatkan file statis Next.js (seperti CSS/JS client) ke path `/assets/_next/...`. Namun, Next.js worker secara default mencari file statis di path `/_next/...` (tanpa prefix `/assets`). Karena worker gagal menemukan chunk file statis saat render, server crash (Error 500).
+- **Solusi**: Pindahkan semua isi dari folder `.open-next/assets/` keluar ke root `.open-next/` sebelum di-deploy.
+  1. Tambahkan custom script di `package.json`:
+     `"pages:build": "npm run build && npx @opennextjs/cloudflare build && mv .open-next/worker.js .open-next/_worker.js && cp -r .open-next/assets/* .open-next/"`
+  2. Gunakan `npm run pages:build` sebagai **Build command** di Cloudflare Pages Dashboard.
+
+## Konfigurasi Final Cloudflare Pages Dashboard yang Benar (Updated):
+- **Framework preset**: `None`
+- **Build command**: `npm run pages:build` *(pastikan script ini ada di package.json)*
+- **Build output directory**: `.open-next` (akan di-override oleh `wrangler.toml` jika dikosongkan, tapi lebih baik disamakan)
+- **Root directory**: `/` (kosongkan)
+- **File wajib di repo**: `wrangler.toml` dengan `pages_build_output_dir = ".open-next"`, `compatibility_flags = ["nodejs_compat"]`, dan block `[vars]` berisi env variables.
+- **File DILARANG di repo**: `wrangler.jsonc` (akan memblokir pembacaan `wrangler.toml`)
