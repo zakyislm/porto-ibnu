@@ -43,14 +43,6 @@ Dengan adanya `wrangler.toml` yang valid, Cloudflare Pages akan membaca config i
 - **Penyebab**: Cloudflare Pages mencari config file dengan prioritas: `wrangler.json` > `wrangler.jsonc` > `wrangler.toml`. Begitu menemukan `wrangler.jsonc` (yang tidak valid untuk Pages), Pages langsung skip dan **tidak mencari** `wrangler.toml` lagi.
 - **Solusi**: **Hapus** `wrangler.jsonc` dari repo (`git rm wrangler.jsonc`). File ini hanya diperlukan untuk deployment via Cloudflare Workers (`wrangler deploy`), bukan untuk Cloudflare Pages. Dengan menghapusnya, Pages akan menemukan `wrangler.toml` yang valid.
 
-## Konfigurasi Final Cloudflare Pages Dashboard yang Benar:
-- **Framework preset**: `None`
-- **Build command**: `npm run build && npx @opennextjs/cloudflare build && mv .open-next/worker.js .open-next/_worker.js`
-- **Build output directory**: `.open-next` (akan di-override oleh `wrangler.toml`)
-- **Root directory**: `/` (kosongkan)
-- **File wajib di repo**: `wrangler.toml` dengan `pages_build_output_dir` dan `compatibility_flags = ["nodejs_compat"]`
-- **File DILARANG di repo**: `wrangler.jsonc` (akan memblokir pembacaan `wrangler.toml`)
-
 ## 8. Error: Service binding 'WORKER_SELF_REFERENCE' references Worker...
 - **Gejala Error**: Build sukses, tapi pas fase "Deploy" di Cloudflare Pages gagal dengan log: `Error: Failed to publish your Function. Got error: Service binding 'WORKER_SELF_REFERENCE' references Worker 'nama-worker' which was not found.`
 - **Penyebab**: Di `wrangler.toml` ada konfigurasi `[[services]]` binding. Binding service antar worker ini tidak disupport di Cloudflare Pages, hanya untuk Cloudflare Workers murni.

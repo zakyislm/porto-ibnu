@@ -1,273 +1,178 @@
-2026-07-21T13:59:10.509854Z	Cloning repository...
-2026-07-21T13:59:11.46151Z	From https://github.com/zakyislm/porto-ibnu
-2026-07-21T13:59:11.4619Z	 * branch            d3f39ff229ebdef2e509a8e9cf0eabea5e6cbf33 -> FETCH_HEAD
-2026-07-21T13:59:11.461975Z	
-2026-07-21T13:59:11.48336Z	HEAD is now at d3f39ff trigger deploy with new build command
-2026-07-21T13:59:11.483554Z	
-2026-07-21T13:59:11.520668Z	
-2026-07-21T13:59:11.520942Z	Using v2 root directory strategy
-2026-07-21T13:59:11.573047Z	Success: Finished cloning repository files
-2026-07-21T13:59:13.064024Z	Checking for configuration in a Wrangler configuration file (BETA)
-2026-07-21T13:59:13.064454Z	
-2026-07-21T13:59:13.064958Z	Found wrangler.json file. Reading build configuration...
-2026-07-21T13:59:13.212907Z	A Wrangler configuration file was found but it does not appear to be valid. Did you mean to use wrangler.toml to configure Pages? If so, then make sure the file is valid and contains the `pages_build_output_dir` property. Skipping file and continuing.
-2026-07-21T13:59:13.561991Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
-2026-07-21T13:59:13.562376Z	Installing project dependencies: npm clean-install --progress=false
-2026-07-21T13:59:17.448657Z	npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
-2026-07-21T13:59:21.157046Z	npm warn deprecated glob@9.3.5: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
-2026-07-21T13:59:53.568787Z	
-2026-07-21T13:59:53.569239Z	added 553 packages, and audited 554 packages in 39s
-2026-07-21T13:59:53.569364Z	
-2026-07-21T13:59:53.569441Z	76 packages are looking for funding
-2026-07-21T13:59:53.569504Z	  run `npm fund` for details
-2026-07-21T13:59:53.607513Z	
-2026-07-21T13:59:53.607765Z	4 moderate severity vulnerabilities
-2026-07-21T13:59:53.607889Z	
-2026-07-21T13:59:53.607965Z	To address all issues (including breaking changes), run:
-2026-07-21T13:59:53.60804Z	  npm audit fix --force
-2026-07-21T13:59:53.608105Z	
-2026-07-21T13:59:53.60817Z	Run `npm audit` for details.
-2026-07-21T13:59:53.702685Z	Executing user command: npm run build && npx @opennextjs/cloudflare build && mv .open-next/worker.js .open-next/assets/_worker.js
-2026-07-21T13:59:53.955873Z	
-2026-07-21T13:59:53.956137Z	> porto-ibnu@0.1.0 build
-2026-07-21T13:59:53.956201Z	> next build
-2026-07-21T13:59:53.956235Z	
-2026-07-21T13:59:54.366154Z	⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
-2026-07-21T13:59:54.370515Z	Attention: Next.js now collects completely anonymous telemetry regarding usage.
-2026-07-21T13:59:54.370696Z	This information is used to shape Next.js' roadmap and prioritize features.
-2026-07-21T13:59:54.37075Z	You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-2026-07-21T13:59:54.37079Z	https://nextjs.org/telemetry
-2026-07-21T13:59:54.370831Z	
-2026-07-21T13:59:54.40525Z	▲ Next.js 16.2.10 (Turbopack)
-2026-07-21T13:59:54.405469Z	
-2026-07-21T13:59:54.447006Z	⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-2026-07-21T13:59:54.479041Z	  Creating an optimized production build ...
-2026-07-21T14:00:03.647305Z	✓ Compiled successfully in 8.9s
-2026-07-21T14:00:03.652124Z	  Running TypeScript ...
-2026-07-21T14:00:03.816914Z	  Finished TypeScript in 164ms ...
-2026-07-21T14:00:03.823309Z	  Collecting page data using 3 workers ...
-2026-07-21T14:00:04.257726Z	⚠ Using edge runtime on a page currently disables static generation for that page
-2026-07-21T14:00:04.485962Z	  Generating static pages using 3 workers (0/4) ...
-2026-07-21T14:00:04.605962Z	  Generating static pages using 3 workers (1/4) 
-2026-07-21T14:00:04.606227Z	  Generating static pages using 3 workers (2/4) 
-2026-07-21T14:00:04.606297Z	  Generating static pages using 3 workers (3/4) 
-2026-07-21T14:00:04.608335Z	✓ Generating static pages using 3 workers (4/4) in 122ms
-2026-07-21T14:00:04.614875Z	  Finalizing page optimization ...
-2026-07-21T14:00:04.626261Z	
-2026-07-21T14:00:04.632606Z	Route (app)
-2026-07-21T14:00:04.632818Z	┌ ƒ /
-2026-07-21T14:00:04.633129Z	├ ƒ /_not-found
-2026-07-21T14:00:04.633214Z	├ ƒ /admin
-2026-07-21T14:00:04.633485Z	├ ƒ /auth/callback
-2026-07-21T14:00:04.633558Z	├ ƒ /cv
-2026-07-21T14:00:04.633624Z	├ ○ /icon.svg
-2026-07-21T14:00:04.633694Z	├ ƒ /login
-2026-07-21T14:00:04.633763Z	├ ○ /robots.txt
-2026-07-21T14:00:04.633835Z	└ ○ /sitemap.xml
-2026-07-21T14:00:04.633888Z	
-2026-07-21T14:00:04.633943Z	
-2026-07-21T14:00:04.633996Z	ƒ Proxy (Middleware)
-2026-07-21T14:00:04.634051Z	
-2026-07-21T14:00:04.634116Z	○  (Static)   prerendered as static content
-2026-07-21T14:00:04.634284Z	ƒ  (Dynamic)  server-rendered on demand
-2026-07-21T14:00:04.634879Z	
-2026-07-21T14:00:07.502393Z	
-2026-07-21T14:00:07.502993Z	┌─────────────────────────────┐
-2026-07-21T14:00:07.50318Z	│ OpenNext — Cloudflare build │
-2026-07-21T14:00:07.503264Z	└─────────────────────────────┘
-2026-07-21T14:00:07.503338Z	
-2026-07-21T14:00:07.628642Z	App directory: /opt/buildhome/repo
-2026-07-21T14:00:07.62892Z	Next.js version : 16.2.10
-2026-07-21T14:00:07.630407Z	@opennextjs/cloudflare version: 1.20.1
-2026-07-21T14:00:07.630575Z	@opennextjs/aws version: 4.0.2
-2026-07-21T14:00:07.630641Z	workerd compatibility_date: 2026-07-21
-2026-07-21T14:00:07.63307Z	
-2026-07-21T14:00:07.633231Z	┌─────────────────────────────────┐
-2026-07-21T14:00:07.633314Z	│ OpenNext — Building Next.js app │
-2026-07-21T14:00:07.633385Z	└─────────────────────────────────┘
-2026-07-21T14:00:07.633439Z	
-2026-07-21T14:00:07.816171Z	
-2026-07-21T14:00:07.816441Z	> porto-ibnu@0.1.0 build
-2026-07-21T14:00:07.8165Z	> next build
-2026-07-21T14:00:07.81655Z	
-2026-07-21T14:00:08.294547Z	▲ Next.js 16.2.10 (Turbopack)
-2026-07-21T14:00:08.294951Z	
-2026-07-21T14:00:08.336202Z	⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-2026-07-21T14:00:08.368458Z	  Creating an optimized production build ...
-2026-07-21T14:00:17.278584Z	✓ Compiled successfully in 8.6s
-2026-07-21T14:00:17.290542Z	  Running TypeScript ...
-2026-07-21T14:00:17.476566Z	  Finished TypeScript in 189ms ...
-2026-07-21T14:00:17.482829Z	  Collecting page data using 3 workers ...
-2026-07-21T14:00:17.976181Z	⚠ Using edge runtime on a page currently disables static generation for that page
-2026-07-21T14:00:18.175768Z	  Generating static pages using 3 workers (0/4) ...
-2026-07-21T14:00:18.325819Z	  Generating static pages using 3 workers (1/4) 
-2026-07-21T14:00:18.326104Z	  Generating static pages using 3 workers (2/4) 
-2026-07-21T14:00:18.326186Z	  Generating static pages using 3 workers (3/4) 
-2026-07-21T14:00:18.334327Z	✓ Generating static pages using 3 workers (4/4) in 159ms
-2026-07-21T14:00:18.342296Z	  Finalizing page optimization ...
-2026-07-21T14:00:18.586002Z	
-2026-07-21T14:00:18.588657Z	Route (app)
-2026-07-21T14:00:18.588819Z	┌ ƒ /
-2026-07-21T14:00:18.588892Z	├ ƒ /_not-found
-2026-07-21T14:00:18.588966Z	├ ƒ /admin
-2026-07-21T14:00:18.589108Z	├ ƒ /auth/callback
-2026-07-21T14:00:18.589208Z	├ ƒ /cv
-2026-07-21T14:00:18.589291Z	├ ○ /icon.svg
-2026-07-21T14:00:18.589337Z	├ ƒ /login
-2026-07-21T14:00:18.58937Z	├ ○ /robots.txt
-2026-07-21T14:00:18.589401Z	└ ○ /sitemap.xml
-2026-07-21T14:00:18.589431Z	
-2026-07-21T14:00:18.589461Z	
-2026-07-21T14:00:18.589512Z	ƒ Proxy (Middleware)
-2026-07-21T14:00:18.58956Z	
-2026-07-21T14:00:18.589603Z	○  (Static)   prerendered as static content
-2026-07-21T14:00:18.589638Z	ƒ  (Dynamic)  server-rendered on demand
-2026-07-21T14:00:18.589688Z	
-2026-07-21T14:00:18.69634Z	
-2026-07-21T14:00:18.696659Z	┌──────────────────────────────┐
-2026-07-21T14:00:18.696892Z	│ OpenNext — Generating bundle │
-2026-07-21T14:00:18.696948Z	└──────────────────────────────┘
-2026-07-21T14:00:18.696996Z	
-2026-07-21T14:00:18.739827Z	Bundling middleware function...
-2026-07-21T14:00:18.836002Z	Bundling static assets...
-2026-07-21T14:00:18.847634Z	Bundling cache assets...
-2026-07-21T14:00:18.856485Z	Building server function: default...
-2026-07-21T14:00:22.301427Z	Applying code patches: 3.163s
-2026-07-21T14:00:24.177127Z	# copyPackageTemplateFiles
-2026-07-21T14:00:24.180358Z	[35m⚙️ Bundling the OpenNext server...
-2026-07-21T14:00:24.180785Z	[0m
-2026-07-21T14:00:25.861147Z	[35mWorker saved in `.open-next/worker.js` 🚀
-2026-07-21T14:00:25.861613Z	[0m
-2026-07-21T14:00:25.861881Z	OpenNext build complete.
-2026-07-21T14:00:26.140642Z	Finished
-2026-07-21T14:00:26.68333Z	Checking for configuration in a Wrangler configuration file (BETA)
-2026-07-21T14:00:26.68379Z	
-2026-07-21T14:00:26.683911Z	Found wrangler.json file. Reading build configuration...
-2026-07-21T14:00:26.802635Z	A Wrangler configuration file was found but it does not appear to be valid. Did you mean to use wrangler.toml to configure Pages? If so, then make sure the file is valid and contains the `pages_build_output_dir` property. Skipping file and continuing.
-2026-07-21T14:00:26.803241Z	Found _worker.js in output directory. Uploading.
-2026-07-21T14:00:26.908066Z	 ⛅️ wrangler 3.114.17
-2026-07-21T14:00:26.909261Z	-------------------
-2026-07-21T14:00:27.62366Z	[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 8 errors:[0m
-2026-07-21T14:00:27.623961Z	
-2026-07-21T14:00:27.624021Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./cloudflare/images.js"[0m
-2026-07-21T14:00:27.624059Z	  
-2026-07-21T14:00:27.62409Z	      _worker.js:2:61:
-2026-07-21T14:00:27.624122Z	  [37m      2 │ ...giImageRequest, handleImageRequest } from [32m"./cloudflare/images.js"[37m;
-2026-07-21T14:00:27.624158Z	          ╵                                              [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.624191Z	  
-2026-07-21T14:00:27.624221Z	  
-2026-07-21T14:00:27.624253Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./cloudflare/init.js"[0m
-2026-07-21T14:00:27.624293Z	  
-2026-07-21T14:00:27.624329Z	      _worker.js:4:48:
-2026-07-21T14:00:27.624368Z	  [37m      4 │ ...rt { runWithCloudflareRequestContext } from [32m"./cloudflare/init.js"[37m;
-2026-07-21T14:00:27.624426Z	          ╵                                                [32m~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.624468Z	  
-2026-07-21T14:00:27.624497Z	  
-2026-07-21T14:00:27.624528Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./cloudflare/skew-protection.js"[0m
-2026-07-21T14:00:27.624558Z	  
-2026-07-21T14:00:27.624587Z	      _worker.js:6:47:
-2026-07-21T14:00:27.624616Z	  [37m      6 │ ...GetSkewProtectionResponse } from [32m"./cloudflare/skew-protection.js"[37m;
-2026-07-21T14:00:27.624657Z	          ╵                                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.62469Z	  
-2026-07-21T14:00:27.624717Z	  
-2026-07-21T14:00:27.62476Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./middleware/handler.mjs"[0m
-2026-07-21T14:00:27.624795Z	  
-2026-07-21T14:00:27.624862Z	      _worker.js:8:45:
-2026-07-21T14:00:27.624893Z	  [37m      8 │ ...t { handler as middlewareHandler } from [32m"./middleware/handler.mjs"[37m;
-2026-07-21T14:00:27.624922Z	          ╵                                            [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.624952Z	  
-2026-07-21T14:00:27.62498Z	  
-2026-07-21T14:00:27.625007Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./.build/durable-objects/queue.js"[0m
-2026-07-21T14:00:27.625043Z	  
-2026-07-21T14:00:27.62507Z	      _worker.js:10:31:
-2026-07-21T14:00:27.625105Z	  [37m      10 │ export { DOQueueHandler } from [32m"./.build/durable-objects/queue.js"[37m;
-2026-07-21T14:00:27.625136Z	           ╵                                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.625164Z	  
-2026-07-21T14:00:27.625191Z	  
-2026-07-21T14:00:27.625218Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./.build/durable-objects/sharded-tag-cache.js"[0m
-2026-07-21T14:00:27.625263Z	  
-2026-07-21T14:00:27.62533Z	      _worker.js:12:34:
-2026-07-21T14:00:27.625395Z	  [37m      12 │ ...edTagCache } from [32m"./.build/durable-objects/sharded-tag-cache.js"[37m;
-2026-07-21T14:00:27.625437Z	           ╵                      [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.62548Z	  
-2026-07-21T14:00:27.625525Z	  
-2026-07-21T14:00:27.625566Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./.build/durable-objects/bucket-cache-purge.js"[0m
-2026-07-21T14:00:27.625598Z	  
-2026-07-21T14:00:27.625636Z	      _worker.js:14:33:
-2026-07-21T14:00:27.625712Z	  [37m      14 │ ...achePurge } from [32m"./.build/durable-objects/bucket-cache-purge.js"[37m;
-2026-07-21T14:00:27.625747Z	           ╵                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.625781Z	  
-2026-07-21T14:00:27.625809Z	  
-2026-07-21T14:00:27.625841Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./server-functions/default/handler.mjs"[0m
-2026-07-21T14:00:27.625886Z	  
-2026-07-21T14:00:27.625939Z	      _worker.js:39:45:
-2026-07-21T14:00:27.625981Z	  [37m      39 │ ...andler } = await import([32m"./server-functions/default/handler.mjs"[37m);
-2026-07-21T14:00:27.626018Z	           ╵                            [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.626057Z	  
-2026-07-21T14:00:27.626094Z	  
-2026-07-21T14:00:27.626136Z	
-2026-07-21T14:00:27.626167Z	
-2026-07-21T14:00:27.627245Z	
-2026-07-21T14:00:27.630047Z	[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 8 errors:[0m
-2026-07-21T14:00:27.630157Z	
-2026-07-21T14:00:27.630209Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./cloudflare/images.js"[0m
-2026-07-21T14:00:27.630246Z	  
-2026-07-21T14:00:27.630278Z	      _worker.js:2:61:
-2026-07-21T14:00:27.630317Z	  [37m      2 │ ...giImageRequest, handleImageRequest } from [32m"./cloudflare/images.js"[37m;
-2026-07-21T14:00:27.630362Z	          ╵                                              [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.630401Z	  
-2026-07-21T14:00:27.630438Z	  
-2026-07-21T14:00:27.630565Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./cloudflare/init.js"[0m
-2026-07-21T14:00:27.630616Z	  
-2026-07-21T14:00:27.630679Z	      _worker.js:4:48:
-2026-07-21T14:00:27.630719Z	  [37m      4 │ ...rt { runWithCloudflareRequestContext } from [32m"./cloudflare/init.js"[37m;
-2026-07-21T14:00:27.630759Z	          ╵                                                [32m~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.630794Z	  
-2026-07-21T14:00:27.630826Z	  
-2026-07-21T14:00:27.630873Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./cloudflare/skew-protection.js"[0m
-2026-07-21T14:00:27.630923Z	  
-2026-07-21T14:00:27.630971Z	      _worker.js:6:47:
-2026-07-21T14:00:27.631036Z	  [37m      6 │ ...GetSkewProtectionResponse } from [32m"./cloudflare/skew-protection.js"[37m;
-2026-07-21T14:00:27.631102Z	          ╵                                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.631161Z	  
-2026-07-21T14:00:27.631214Z	  
-2026-07-21T14:00:27.631273Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./middleware/handler.mjs"[0m
-2026-07-21T14:00:27.631346Z	  
-2026-07-21T14:00:27.63139Z	      _worker.js:8:45:
-2026-07-21T14:00:27.631429Z	  [37m      8 │ ...t { handler as middlewareHandler } from [32m"./middleware/handler.mjs"[37m;
-2026-07-21T14:00:27.631477Z	          ╵                                            [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.63153Z	  
-2026-07-21T14:00:27.631582Z	  
-2026-07-21T14:00:27.631646Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./.build/durable-objects/queue.js"[0m
-2026-07-21T14:00:27.631709Z	  
-2026-07-21T14:00:27.631757Z	      _worker.js:10:31:
-2026-07-21T14:00:27.631794Z	  [37m      10 │ export { DOQueueHandler } from [32m"./.build/durable-objects/queue.js"[37m;
-2026-07-21T14:00:27.631835Z	           ╵                                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.631873Z	  
-2026-07-21T14:00:27.631903Z	  
-2026-07-21T14:00:27.631943Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./.build/durable-objects/sharded-tag-cache.js"[0m
-2026-07-21T14:00:27.631982Z	  
-2026-07-21T14:00:27.632023Z	      _worker.js:12:34:
-2026-07-21T14:00:27.632056Z	  [37m      12 │ ...edTagCache } from [32m"./.build/durable-objects/sharded-tag-cache.js"[37m;
-2026-07-21T14:00:27.632101Z	           ╵                      [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.632139Z	  
-2026-07-21T14:00:27.632193Z	  
-2026-07-21T14:00:27.632253Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./.build/durable-objects/bucket-cache-purge.js"[0m
-2026-07-21T14:00:27.632306Z	  
-2026-07-21T14:00:27.632358Z	      _worker.js:14:33:
-2026-07-21T14:00:27.632398Z	  [37m      14 │ ...achePurge } from [32m"./.build/durable-objects/bucket-cache-purge.js"[37m;
-2026-07-21T14:00:27.632452Z	           ╵                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.632507Z	  
-2026-07-21T14:00:27.632559Z	  
-2026-07-21T14:00:27.632613Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./server-functions/default/handler.mjs"[0m
-2026-07-21T14:00:27.63267Z	  
-2026-07-21T14:00:27.632715Z	      _worker.js:39:45:
-2026-07-21T14:00:27.632762Z	  [37m      39 │ ...andler } = await import([32m"./server-functions/default/handler.mjs"[37m);
-2026-07-21T14:00:27.632815Z	           ╵                            [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-2026-07-21T14:00:27.632877Z	  
-2026-07-21T14:00:27.632939Z	  
-2026-07-21T14:00:27.632988Z	
-2026-07-21T14:00:27.633033Z	
-2026-07-21T14:00:27.6384Z	🪵  Logs were written to "/root/.config/.wrangler/logs/wrangler-2026-07-21_14-00-27_314.log"
-2026-07-21T14:00:27.714969Z	Failed building Pages Functions.
-2026-07-21T14:00:28.411321Z	Failed: generating Pages Functions failed. Check the logs above for more information. If this continues for an unknown reason, contact support: https://cfl.re/3WgEyrH
+2026-07-21T15:18:52.002509Z	Cloning repository...
+2026-07-21T15:18:52.880202Z	From https://github.com/zakyislm/porto-ibnu
+2026-07-21T15:18:52.880491Z	 * branch            819aff9e7525c7299f0dba1851b60926e450f476 -> FETCH_HEAD
+2026-07-21T15:18:52.880594Z	
+2026-07-21T15:18:52.902682Z	HEAD is now at 819aff9 docs: add failure #10 for cloudflare pages asset routing and update final config
+2026-07-21T15:18:52.902922Z	
+2026-07-21T15:18:52.941216Z	
+2026-07-21T15:18:52.941539Z	Using v2 root directory strategy
+2026-07-21T15:18:52.954172Z	Success: Finished cloning repository files
+2026-07-21T15:18:54.628093Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-07-21T15:18:54.628525Z	
+2026-07-21T15:18:54.628791Z	Found wrangler.toml file. Reading build configuration...
+2026-07-21T15:18:54.634344Z	pages_build_output_dir: .open-next
+2026-07-21T15:18:54.634513Z	Build environment variables: 
+2026-07-21T15:18:54.634616Z	  - NEXT_PUBLIC_SITE_URL: https://ibnugaots.pages.dev
+2026-07-21T15:18:54.634672Z	  - NEXT_PUBLIC_SUPABASE_URL: https://cyyndwixcdxntedsxlpe.supabase.co
+2026-07-21T15:18:54.634771Z	  - NEXT_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5eW5kd2l4Y2R4bnRlZHN4bHBlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwODY5NjcsImV4cCI6MjA5ODY2Mjk2N30.kGFiyvqUp3SAaIuUMbtmFi2ieHOJKV-jJUS06r0uoNc
+2026-07-21T15:18:54.634867Z	  - MASTER_ADMIN_EMAIL: ibnugaots231206@gmail.com
+2026-07-21T15:18:54.792918Z	Successfully read the Wrangler configuration file.
+2026-07-21T15:18:55.05458Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-07-21T15:18:55.054904Z	Installing project dependencies: npm clean-install --progress=false
+2026-07-21T15:18:59.375757Z	npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2026-07-21T15:19:03.247934Z	npm warn deprecated glob@9.3.5: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-07-21T15:19:39.84679Z	
+2026-07-21T15:19:39.847059Z	added 553 packages, and audited 554 packages in 44s
+2026-07-21T15:19:39.847322Z	
+2026-07-21T15:19:39.847551Z	76 packages are looking for funding
+2026-07-21T15:19:39.847701Z	  run `npm fund` for details
+2026-07-21T15:19:39.88337Z	
+2026-07-21T15:19:39.883686Z	4 moderate severity vulnerabilities
+2026-07-21T15:19:39.883791Z	
+2026-07-21T15:19:39.883846Z	To address all issues (including breaking changes), run:
+2026-07-21T15:19:39.883888Z	  npm audit fix --force
+2026-07-21T15:19:39.883924Z	
+2026-07-21T15:19:39.883959Z	Run `npm audit` for details.
+2026-07-21T15:19:39.983997Z	Executing user command: npm run pages:build
+2026-07-21T15:19:40.242637Z	
+2026-07-21T15:19:40.243063Z	> porto-ibnu@0.1.0 pages:build
+2026-07-21T15:19:40.24318Z	> npm run build && npx @opennextjs/cloudflare build && mv .open-next/worker.js .open-next/_worker.js && cp -r .open-next/assets/* .open-next/
+2026-07-21T15:19:40.243291Z	
+2026-07-21T15:19:40.411244Z	
+2026-07-21T15:19:40.411962Z	> porto-ibnu@0.1.0 build
+2026-07-21T15:19:40.412125Z	> next build
+2026-07-21T15:19:40.4122Z	
+2026-07-21T15:19:40.900758Z	⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+2026-07-21T15:19:40.904784Z	Attention: Next.js now collects completely anonymous telemetry regarding usage.
+2026-07-21T15:19:40.90515Z	This information is used to shape Next.js' roadmap and prioritize features.
+2026-07-21T15:19:40.905331Z	You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2026-07-21T15:19:40.905514Z	https://nextjs.org/telemetry
+2026-07-21T15:19:40.905773Z	
+2026-07-21T15:19:40.934515Z	▲ Next.js 16.2.10 (Turbopack)
+2026-07-21T15:19:40.934728Z	
+2026-07-21T15:19:40.979538Z	⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+2026-07-21T15:19:41.017243Z	  Creating an optimized production build ...
+2026-07-21T15:19:50.024477Z	✓ Compiled successfully in 8.8s
+2026-07-21T15:19:50.028251Z	  Running TypeScript ...
+2026-07-21T15:19:50.14621Z	  Finished TypeScript in 118ms ...
+2026-07-21T15:19:50.165541Z	  Collecting page data using 3 workers ...
+2026-07-21T15:19:50.585282Z	⚠ Using edge runtime on a page currently disables static generation for that page
+2026-07-21T15:19:50.786281Z	  Generating static pages using 3 workers (0/4) ...
+2026-07-21T15:19:50.91641Z	  Generating static pages using 3 workers (1/4) 
+2026-07-21T15:19:50.916657Z	  Generating static pages using 3 workers (2/4) 
+2026-07-21T15:19:50.916728Z	  Generating static pages using 3 workers (3/4) 
+2026-07-21T15:19:50.91868Z	✓ Generating static pages using 3 workers (4/4) in 132ms
+2026-07-21T15:19:50.92323Z	  Finalizing page optimization ...
+2026-07-21T15:19:50.930611Z	
+2026-07-21T15:19:50.930726Z	Route (app)
+2026-07-21T15:19:50.930788Z	┌ ƒ /
+2026-07-21T15:19:50.930842Z	├ ƒ /_not-found
+2026-07-21T15:19:50.930877Z	├ ƒ /admin
+2026-07-21T15:19:50.930924Z	├ ƒ /auth/callback
+2026-07-21T15:19:50.930962Z	├ ƒ /cv
+2026-07-21T15:19:50.930993Z	├ ○ /icon.svg
+2026-07-21T15:19:50.931034Z	├ ƒ /login
+2026-07-21T15:19:50.931064Z	├ ○ /robots.txt
+2026-07-21T15:19:50.931097Z	└ ○ /sitemap.xml
+2026-07-21T15:19:50.931128Z	
+2026-07-21T15:19:50.931158Z	
+2026-07-21T15:19:50.931187Z	ƒ Proxy (Middleware)
+2026-07-21T15:19:50.931218Z	
+2026-07-21T15:19:50.93125Z	○  (Static)   prerendered as static content
+2026-07-21T15:19:50.931285Z	ƒ  (Dynamic)  server-rendered on demand
+2026-07-21T15:19:50.931331Z	
+2026-07-21T15:19:53.457711Z	
+2026-07-21T15:19:53.457989Z	┌─────────────────────────────┐
+2026-07-21T15:19:53.458042Z	│ OpenNext — Cloudflare build │
+2026-07-21T15:19:53.458076Z	└─────────────────────────────┘
+2026-07-21T15:19:53.458172Z	
+2026-07-21T15:19:53.561111Z	App directory: /opt/buildhome/repo
+2026-07-21T15:19:53.561536Z	Next.js version : 16.2.10
+2026-07-21T15:19:53.56346Z	@opennextjs/cloudflare version: 1.20.1
+2026-07-21T15:19:53.563673Z	@opennextjs/aws version: 4.0.2
+2026-07-21T15:19:53.563723Z	workerd compatibility_date: 2026-07-21
+2026-07-21T15:19:53.56642Z	
+2026-07-21T15:19:53.566608Z	┌─────────────────────────────────┐
+2026-07-21T15:19:53.566701Z	│ OpenNext — Building Next.js app │
+2026-07-21T15:19:53.56676Z	└─────────────────────────────────┘
+2026-07-21T15:19:53.566807Z	
+2026-07-21T15:19:53.741513Z	
+2026-07-21T15:19:53.742971Z	> porto-ibnu@0.1.0 build
+2026-07-21T15:19:53.743967Z	> next build
+2026-07-21T15:19:53.744385Z	
+2026-07-21T15:19:54.288657Z	▲ Next.js 16.2.10 (Turbopack)
+2026-07-21T15:19:54.288987Z	
+2026-07-21T15:19:54.340175Z	⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+2026-07-21T15:19:54.374549Z	  Creating an optimized production build ...
+2026-07-21T15:20:04.153274Z	✓ Compiled successfully in 9.5s
+2026-07-21T15:20:04.16262Z	  Running TypeScript ...
+2026-07-21T15:20:04.298623Z	  Finished TypeScript in 136ms ...
+2026-07-21T15:20:04.313255Z	  Collecting page data using 3 workers ...
+2026-07-21T15:20:04.853986Z	⚠ Using edge runtime on a page currently disables static generation for that page
+2026-07-21T15:20:05.00754Z	  Generating static pages using 3 workers (0/4) ...
+2026-07-21T15:20:05.155933Z	  Generating static pages using 3 workers (1/4) 
+2026-07-21T15:20:05.156171Z	  Generating static pages using 3 workers (2/4) 
+2026-07-21T15:20:05.156226Z	  Generating static pages using 3 workers (3/4) 
+2026-07-21T15:20:05.157676Z	✓ Generating static pages using 3 workers (4/4) in 150ms
+2026-07-21T15:20:05.167512Z	  Finalizing page optimization ...
+2026-07-21T15:20:05.391971Z	
+2026-07-21T15:20:05.394833Z	Route (app)
+2026-07-21T15:20:05.394993Z	┌ ƒ /
+2026-07-21T15:20:05.395055Z	├ ƒ /_not-found
+2026-07-21T15:20:05.3951Z	├ ƒ /admin
+2026-07-21T15:20:05.395145Z	├ ƒ /auth/callback
+2026-07-21T15:20:05.3952Z	├ ƒ /cv
+2026-07-21T15:20:05.395271Z	├ ○ /icon.svg
+2026-07-21T15:20:05.395309Z	├ ƒ /login
+2026-07-21T15:20:05.39534Z	├ ○ /robots.txt
+2026-07-21T15:20:05.395382Z	└ ○ /sitemap.xml
+2026-07-21T15:20:05.395411Z	
+2026-07-21T15:20:05.395448Z	
+2026-07-21T15:20:05.395479Z	ƒ Proxy (Middleware)
+2026-07-21T15:20:05.395517Z	
+2026-07-21T15:20:05.395573Z	○  (Static)   prerendered as static content
+2026-07-21T15:20:05.395604Z	ƒ  (Dynamic)  server-rendered on demand
+2026-07-21T15:20:05.395644Z	
+2026-07-21T15:20:05.495645Z	
+2026-07-21T15:20:05.496265Z	┌──────────────────────────────┐
+2026-07-21T15:20:05.496433Z	│ OpenNext — Generating bundle │
+2026-07-21T15:20:05.496487Z	└──────────────────────────────┘
+2026-07-21T15:20:05.496524Z	
+2026-07-21T15:20:05.54132Z	Bundling middleware function...
+2026-07-21T15:20:05.631413Z	Bundling static assets...
+2026-07-21T15:20:05.640825Z	Bundling cache assets...
+2026-07-21T15:20:05.650222Z	Building server function: default...
+2026-07-21T15:20:08.717331Z	Applying code patches: 2.773s
+2026-07-21T15:20:10.625174Z	# copyPackageTemplateFiles
+2026-07-21T15:20:10.630495Z	[35m⚙️ Bundling the OpenNext server...
+2026-07-21T15:20:10.63072Z	[0m
+2026-07-21T15:20:12.399301Z	[35mWorker saved in `.open-next/worker.js` 🚀
+2026-07-21T15:20:12.40171Z	[0m
+2026-07-21T15:20:12.401998Z	OpenNext build complete.
+2026-07-21T15:20:12.650759Z	Finished
+2026-07-21T15:20:13.230314Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-07-21T15:20:13.231048Z	
+2026-07-21T15:20:13.231196Z	Found wrangler.toml file. Reading build configuration...
+2026-07-21T15:20:13.237752Z	pages_build_output_dir: .open-next
+2026-07-21T15:20:13.237967Z	Build environment variables: 
+2026-07-21T15:20:13.238245Z	  - NEXT_PUBLIC_SITE_URL: https://ibnugaots.pages.dev
+2026-07-21T15:20:13.238473Z	  - NEXT_PUBLIC_SUPABASE_URL: https://cyyndwixcdxntedsxlpe.supabase.co
+2026-07-21T15:20:13.238576Z	  - NEXT_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5eW5kd2l4Y2R4bnRlZHN4bHBlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwODY5NjcsImV4cCI6MjA5ODY2Mjk2N30.kGFiyvqUp3SAaIuUMbtmFi2ieHOJKV-jJUS06r0uoNc
+2026-07-21T15:20:13.238712Z	  - MASTER_ADMIN_EMAIL: ibnugaots231206@gmail.com
+2026-07-21T15:20:13.390686Z	Successfully read the Wrangler configuration file.
+2026-07-21T15:20:13.391415Z	Found _worker.js in output directory. Uploading.
+2026-07-21T15:20:13.396844Z	 ⛅️ wrangler 3.114.17
+2026-07-21T15:20:13.396967Z	-------------------
+2026-07-21T15:20:14.674345Z	✨ Compiled Worker successfully
+2026-07-21T15:20:14.818703Z	Validating asset output directory
+2026-07-21T15:20:16.739415Z	Deploying your site to Cloudflare's global network...
+2026-07-21T15:20:18.893119Z	Parsed 1 valid header rule.
+2026-07-21T15:20:19.943592Z	Uploading... (134/152)
+2026-07-21T15:20:20.759324Z	Uploading... (140/152)
+2026-07-21T15:20:20.874402Z	Uploading... (146/152)
+2026-07-21T15:20:21.311298Z	Uploading... (152/152)
+2026-07-21T15:20:21.311618Z	✨ Success! Uploaded 18 files (134 already uploaded) (1.68 sec)
+2026-07-21T15:20:21.311715Z	
+2026-07-21T15:20:21.67129Z	✨ Upload complete!
+2026-07-21T15:20:23.299694Z	Success: Assets published!
+2026-07-21T15:20:26.860873Z	Success: Your site was deployed!
