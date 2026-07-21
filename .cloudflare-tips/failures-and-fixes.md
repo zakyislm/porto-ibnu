@@ -51,3 +51,21 @@ Dengan adanya `wrangler.toml` yang valid, Cloudflare Pages akan membaca config i
 - **File wajib di repo**: `wrangler.toml` dengan `pages_build_output_dir` dan `compatibility_flags = ["nodejs_compat"]`
 - **File DILARANG di repo**: `wrangler.jsonc` (akan memblokir pembacaan `wrangler.toml`)
 
+## 8. Error: Service binding 'WORKER_SELF_REFERENCE' references Worker...
+- **Gejala Error**: Build sukses, tapi pas fase "Deploy" di Cloudflare Pages gagal dengan log: `Error: Failed to publish your Function. Got error: Service binding 'WORKER_SELF_REFERENCE' references Worker 'nama-worker' which was not found.`
+- **Penyebab**: Di `wrangler.toml` ada konfigurasi `[[services]]` binding. Binding service antar worker ini tidak disupport di Cloudflare Pages, hanya untuk Cloudflare Workers murni.
+- **Solusi**: Hapus blok `[[services]]` beserta isinya dari `wrangler.toml`.
+
+## 9. 500 Internal Server Error (Blank Page) / Missing Supabase credentials in .env.local
+- **Gejala Error**: Saat dibuka di browser, web menampilkan tulisan `Internal Server Error` berwarna putih dengan background hitam. Di log build sebelumnya sempat muncul `Missing Supabase credentials in .env.local` atau `Build environment variables: (none found)`.
+- **Penyebab**: Environment Variables yang di-set di **Cloudflare Dashboard akan di-override / diabaikan** jika ada file `wrangler.toml` di repo TAPI file tersebut tidak memiliki block `[vars]`. Pages beranggapan "Karena wrangler.toml tidak punya variables, maka project ini tidak butuh variables", sehingga semua variable dashboard dihapus saat build. Akibatnya Next.js tidak mendapat URL Supabase saat compile time dan me-return *undefined*, yang berujung pada error saat runtime.
+- **Solusi**: 
+  - **Pindahkan semua Environment Variables** (yang aman/public) dari dashboard langsung ke dalam file `wrangler.toml` di bawah block `[vars]`.
+  - Contoh:
+    ```toml
+    [vars]
+    NEXT_PUBLIC_SITE_URL = "https://ibnugaots.pages.dev"
+    NEXT_PUBLIC_SUPABASE_URL = "https://xxx.supabase.co"
+    NEXT_PUBLIC_SUPABASE_ANON_KEY = "xxx"
+    MASTER_ADMIN_EMAIL = "ibnu@gmail.com"
+    ```
