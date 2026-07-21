@@ -1,0 +1,8 @@
+name = "porto-ibnu"
+pages_build_output_dir = ".open-next"
+compatibility_date = "2026-07-21"
+compatibility_flags = ["nodejs_compat"]
+
+[[services]]
+binding = "WORKER_SELF_REFERENCE"
+service = "porto-ibnu"
